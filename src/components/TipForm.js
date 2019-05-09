@@ -7,19 +7,22 @@ class TipForm extends Component {
     state = {
         bill: '',
         percentage: '',
-        split: ''
+        split: '1'
     }
     onChangeHandler = ({ target: { name, value } }) => {
         this.setState({
             [name]: value
         }, () => {
             if (name === "split") {
-                console.log('triggered')
                 this.props.changeSplit(value)
             }
         })
     }
-
+    onSubmitHandler = (e) => {
+        e.preventDefault();
+        const { bill, percentage, split} = this.state;
+        this.props.calcTip(bill, percentage, split);
+    }
     render() {
         return (
             <Card>
@@ -40,7 +43,7 @@ class TipForm extends Component {
                             <Form.Text className="text-muted">Leave at 1 if you are not splitting.</Form.Text>
                         </Form.Group>
                         <div className="text-center">
-                            <Button variant="primary" type="submit">Calculate the <FaHeart style={{ color: "red" }} /></Button>
+                            <Button onClick={this.onSubmitHandler} variant="primary" type="submit">Calculate the <FaHeart style={{ color: "red" }} /></Button>
                         </div>
                     </Form>
                 </Card.Body>
