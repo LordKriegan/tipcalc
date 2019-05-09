@@ -5,6 +5,7 @@ import { CalcNav } from './components';
 import './App.css';
 
 function App() {
+  //basic layout. navbar on top and container. rows and columns are specified in pages.
   return (
     <>
       <CalcNav />
