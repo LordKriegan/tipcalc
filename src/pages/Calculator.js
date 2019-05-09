@@ -9,9 +9,9 @@ class Calculator extends Component {
     }
     calcTip = (bill, percentage, splitNum) => {
         if (
-            isNaN(bill) || parseInt(bill) <= 0 ||
-            isNaN(percentage) || parseInt(percentage) < 1 ||
-            isNaN(splitNum) ||  parseInt(splitNum) < 1 || !Number.isInteger(parseInt(splitNum))
+            isNaN(bill) || parseFloat(bill) <= 0 ||
+            isNaN(percentage) || parseFloat(percentage) < 1 ||
+            isNaN(splitNum) ||  parseFloat(splitNum) < 1 || !Number.isInteger(parseFloat(splitNum))
             ) {
                 console.log("error")
                 return;
