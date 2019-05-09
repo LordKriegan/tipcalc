@@ -15,25 +15,25 @@
         <a class="navbar-brand mx-auto" href="#">Show The Waiter/Waitress Some Love!</a>
     </nav>
     <div class="container">
-        <div class="row match-my-cols">
+        <div class="row match-my-cols"><!--match-my-cols makes all columns same height-->
             <div class="col-12 col-md-4 offset-md-1">
-                <div class="card fullHeight">
+                <div class="card fullHeight"> <!--fullHeight fills column content to height of column-->
                     <h5 class="text-center card-header">Bill Information</h5>
                     <div class="card-body">
                         <form>
                             <div class="form-group">
                                 <label for="bill" class="form-label">Bill Amount: <small class="form-text redText" id="billError"></small></label>
-                                <input name="bill" min="0" type="number" id="bill" class="form-control" value="" />
+                                <input min="0" type="number" id="bill" class="form-control" value="0" />
                             </div>
                             <div class="form-group">
                                 <label for="percentage" class="form-label">Tip Percentage: <small class="form-text redText"
                                         id="percentageError"></small></label>
-                                <input name="percentage" min="1" placeholder="15" type="number" id="percentage" class="form-control"
+                                <input min="1" placeholder="15" type="number" id="percentage" class="form-control"
                                     value="15">
                             </div>
                             <div class="form-group">
                                 <label for="splitNum" class="form-label">Split: <small class="form-text redText" id="splitError"></small></label>
-                                <input name="split" min="1" placeholder="1" type="number" id="splitNum" class="form-control"
+                                <input min="1" placeholder="1" type="number" id="splitNum" class="form-control"
                                     value="1" />
                                 <small class="text-muted form-text">Leave at 1 if you are not splitting.</small>
                             </div>
