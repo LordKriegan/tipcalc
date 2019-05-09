@@ -9,6 +9,11 @@ class TipForm extends Component {
         split: '1'
     }
     onChangeHandler = ({ target: { name, value } }) => {
+        if (value === "") {
+            if (name === "bill") value = "0";
+            if (name === "percentage") value = "15";
+            if (name === "split") value = "1";
+        }
         this.setState({
             [name]: value
         }, () => {
