@@ -4,7 +4,7 @@ import { TipForm, TipOutput } from '../components';
 
 class Calculator extends Component { 
     state = {
-        output: 0,
+        output: 0.00,
         split: 1
     }
     calcTip = (bill, percentage, splitNum) => {
@@ -19,7 +19,7 @@ class Calculator extends Component {
         const tipTotal = bill * (percentage / 100);
         const splitTotal = tipTotal / splitNum
         this.setState({
-            output: (splitNum > 1) ? splitTotal : tipTotal
+            output: ((splitNum > 1) ? splitTotal : tipTotal).toFixed(2)
         })
     }
     changeSplit = (splitNum) => {
