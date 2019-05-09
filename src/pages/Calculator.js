@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Jumbotron } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { TipForm, TipOutput } from '../components';
 
 class Calculator extends Component { 
@@ -31,10 +31,10 @@ class Calculator extends Component {
         return(
             <Row className="match-my-cols">
                 <Col xs={12} md={{span: 4, offset: 1}}>
-                    <TipForm calcTip={this.calcTip} changeSplit={this.changeSplit} className="h-100"/>
+                    <TipForm calcTip={this.calcTip} changeSplit={this.changeSplit} />
                 </Col>
                 <Col xs={12} md={{span: 4, offset: 1}}>
-                    <TipOutput split={this.state.split} totalTip={this.state.output} className="h-100" />
+                    <TipOutput split={this.state.split} totalTip={this.state.output} />
                 </Col>
             </Row>
         )

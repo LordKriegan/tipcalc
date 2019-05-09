@@ -23,7 +23,7 @@ class TipForm extends Component {
 
     render() {
         return (
-            <Card>
+            <Card style={{height: "100%"}} >
                 <Card.Header className="text-center" as="h5">Bill Information</Card.Header>
                 <Card.Body>
                     <Form>
